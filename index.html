@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
     <title>Code Quiz</title>
 </head>
 <body>
-    
-
-    <script src=script.js></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 id="score">Score:</h3>
+            </div>
+            <div class="col-6">
+                <h3 id="timer">Time:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="quiz">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Answer as many questions correctly within the given time. Press the start button to begin.</p>
+                <button type="button" class="btn btn-secondary" id="start">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+<script src=script.js></script>
 </body>
 </html>

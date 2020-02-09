@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(191, 220, 224);
+}
+#score {
+    color: rgb(108, 107, 202);
+    position: fixed;
+    left: 0px;
+}
+#timer {
+    color: rgb(108, 107, 202);
+    position: fixed;
+    right: 6%;
+}
+#quiz {
+    border: 15px solid lemonchiffon;
+    background-color: rgb(154, 159, 201);
+    color: lemonchiffon;
+    margin-top: 12%;
+    padding: 8%;
+    float: center;
+}
+h1 {
+    text-align: center;
+    float: top;
+}
+p {
+    text-align: center;
+}
+#start {
+    margin-left: 44%;
+    margin-bottom: 0;
+}
