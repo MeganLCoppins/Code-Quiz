@@ -7,7 +7,6 @@ body {
     left: 0px;
 }
 #timer {
-    color: rgb(108, 107, 202);
     position: fixed;
     right: 6%;
 }
@@ -19,14 +18,23 @@ body {
     padding: 8%;
     float: center;
 }
-h1 {
+#quizTitle {
     text-align: center;
     float: top;
 }
-p {
+#directions {
     text-align: center;
 }
 #start {
     margin-left: 44%;
     margin-bottom: 0;
+}
+#startQuiz {
+    border: 15px solid gray;
+    background-color: rgb(154, 159, 201);
+    color: gray;
+    margin-top: 12%;
+    padding: 8%;
+    float: center;
+    display: none;
 }
