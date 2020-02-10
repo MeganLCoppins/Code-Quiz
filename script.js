@@ -8,9 +8,9 @@ var $results = document.querySelector("#results");
 
 var secondsLeft = 67;
 
-var questionIndex = 0;
+var score= 0;
 
-var $score = 0;
+var questionIndex = 0;
 
 var questions = [
   {
@@ -75,7 +75,7 @@ $start.addEventListener("click", function(e) {
     $timer.textContent = secondsLeft;
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
-    }
+    } 
   }, 1000);
 });
 
@@ -107,16 +107,17 @@ $answers.addEventListener("click", function(e) {
   if (!e.target.matches("button")) return;
   var index = e.target.dataset.index;
   var answer = questions[questionIndex].answers[index].isCorrect;
+  console.log(answer);
   if (answer === true) {
     // handle logic for correct answer
+    score++;
+    $score.textContent = ("Score: " + score);
 
-  } else {
-    // handle logic for incorrect answer
-  }
+  } 
   questionIndex++;
   renderQuestion();
 });
 
 function renderResults() {
-    
+
 }
