@@ -9,6 +9,7 @@ body {
 #timer {
     position: fixed;
     right: 6%;
+    color: rgb(108, 107, 202);
 }
 #quiz {
     border: 15px solid lemonchiffon;
@@ -26,13 +27,21 @@ body {
     text-align: center;
 }
 #start {
-    margin-left: 44%;
-    margin-bottom: 0;
+    margin-left: 42%;
 }
 #startQuiz {
-    border: 15px solid gray;
+    border: 15px solid lemonchiffon;
     background-color: rgb(154, 159, 201);
-    color: gray;
+    color: lemonchiffon;
+    margin-top: 12%;
+    padding: 8%;
+    float: center;
+    display: none;
+}
+#results {
+    border: 15px solid lemonchiffon;
+    background-color: rgb(154, 159, 201);
+    color: lemonchiffon;
     margin-top: 12%;
     padding: 8%;
     float: center;
