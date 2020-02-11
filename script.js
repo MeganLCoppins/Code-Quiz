@@ -5,8 +5,11 @@ var $start = document.querySelector("#start");
 var $timer = document.querySelector("#timer");
 var $answers = document.querySelector("#answersPrompt");
 var $results = document.querySelector("#results");
+var $yourScore = document.querySelector("#yourScore");
+var $goBack = document.querySelector("#goBack");
 
-var secondsLeft = 67;
+var secondsLeft = 60;
+$timer.textContent = secondsLeft;
 
 var score= 0;
 
@@ -66,16 +69,16 @@ var questions = [
 
 $start.addEventListener("click", function(e) {
   e.preventDefault();
-  document.getElementById("quiz").style.display = "none";
-  document.getElementById("startQuiz").style.display = "block";
+  $quiz.style.display = "none";
+  $startQuiz.style.display = "block";
   renderQuestion();
 
   var timerInterval = setInterval(function() {
     secondsLeft--;
     $timer.textContent = secondsLeft;
-    if (secondsLeft === 0) {
-      clearInterval(timerInterval);
-    } 
+    if (secondsLeft === 0 || questionIndex === questions.length) {
+        clearInterval(timerInterval);
+    };
   }, 1000);
 });
 
@@ -103,7 +106,6 @@ function renderQuestion() {
 }
 
 $answers.addEventListener("click", function(e) {
-  // renderQuestion(); creates duplicates of answer options
   if (!e.target.matches("button")) return;
   var index = e.target.dataset.index;
   var answer = questions[questionIndex].answers[index].isCorrect;
@@ -119,5 +121,16 @@ $answers.addEventListener("click", function(e) {
 });
 
 function renderResults() {
+    $yourScore.textContent = ("Your final score is : " + score + "/5!");
+    // go back to start quiz div when button is clicked
+    $goBack.addEventListener("click", function(e){
+        $results.style.display = "none";
+        $quiz.style.display = "block";
+        score = 0;
+        $score.textContent = ("Score: " + score);
+        questionIndex = 0;
+        secondsLeft = 60;
+        $timer.textContent = secondsLeft;
+    })
 
-}
+};

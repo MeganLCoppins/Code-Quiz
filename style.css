@@ -21,13 +21,12 @@ body {
 }
 #quizTitle {
     text-align: center;
-    float: top;
 }
 #directions {
     text-align: center;
 }
 #start {
-    margin-left: 42%;
+    margin-left: 390px;
 }
 #startQuiz {
     border: 15px solid lemonchiffon;
@@ -46,4 +45,16 @@ body {
     padding: 8%;
     float: center;
     display: none;
+}
+
+#resultsTitle {
+    text-align: center;
+}
+
+#yourScore {
+    text-align: center;
+}
+
+#goBack {
+    margin-left: 410px;
 }
