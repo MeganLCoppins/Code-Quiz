@@ -109,7 +109,6 @@ $answers.addEventListener("click", function(e) {
   if (!e.target.matches("button")) return;
   var index = e.target.dataset.index;
   var answer = questions[questionIndex].answers[index].isCorrect;
-  console.log(answer);
   if (answer === true) {
     // handle logic for correct answer
     score++;
