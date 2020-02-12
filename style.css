@@ -3,6 +3,7 @@ body {
 }
 #score {
     color: rgb(108, 107, 202);
+    font-family: 'Noto Sans', sans-serif;
     position: fixed;
     left: 0px;
 }
@@ -10,11 +11,14 @@ body {
     position: fixed;
     right: 6%;
     color: rgb(108, 107, 202);
+    font-family: 'Noto Sans', sans-serif;
 }
 #quiz {
     border: 15px solid lemonchiffon;
     background-color: rgb(154, 159, 201);
     color: lemonchiffon;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
     margin-top: 12%;
     padding: 8%;
     float: center;
@@ -23,6 +27,7 @@ body {
     color: rgb(108, 107, 202);
     text-align: center;
     font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 40px;
     display: none;
 }
@@ -39,6 +44,8 @@ body {
     border: 15px solid lemonchiffon;
     background-color: rgb(154, 159, 201);
     color: lemonchiffon;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
     margin-top: 12%;
     padding: 8%;
     float: center;
@@ -48,6 +55,8 @@ body {
     border: 15px solid lemonchiffon;
     background-color: rgb(154, 159, 201);
     color: lemonchiffon;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
     margin-top: 12%;
     padding: 8%;
     float: center;
@@ -69,15 +78,17 @@ body {
 #correctShow {
     display: none;
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
-    color: rgb(154, 159, 201);
+    color: rgb(108, 107, 202);
 }
 
 #incorrectShow {
     display: none;
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
-    color: rgb(154, 159, 201);
+    color: rgb(108, 107, 202);
 }
