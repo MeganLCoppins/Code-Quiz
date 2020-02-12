@@ -25,6 +25,13 @@
         </div>
       </div>
       <div class="row">
+        <div class="col" id="noTime">
+          <p>
+            You ran out of time! Press start to try again.
+          </p>
+        </div>
+      </div>
+      <div class="row">
         <div class="col" id="quiz">
           <h1 id="quizTitle">Coding Quiz Challenge</h1>
           <p id="directions">
@@ -40,11 +47,27 @@
           <div id="answersPrompt" class="btn-group-vertical"></div>
         </div>
         <div class="col" id="results">
-            <h1 id="resultsTitle">All Done!</h1>
-            <h3 id="yourScore"></h3>
-            <button type="button" class="btn btn-secondary" id="goBack">Go Back</button>
+          <h1 id="resultsTitle">All Done!</h1>
+          <h3 id="yourScore"></h3>
+          <button type="button" class="btn btn-secondary" id="goBack">
+            Go Back
+          </button>
         </div>
-      </div> 
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="correctShow">
+            <p>
+              Correct! You get one point!
+            </p>
+          </div>
+          <div id="incorrectShow">
+            <p>
+              Wrong! No points for you!
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

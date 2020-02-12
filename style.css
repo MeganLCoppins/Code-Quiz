@@ -19,6 +19,13 @@ body {
     padding: 8%;
     float: center;
 }
+#noTime {
+    color: rgb(108, 107, 202);
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    display: none;
+}
 #quizTitle {
     text-align: center;
 }
@@ -57,4 +64,20 @@ body {
 
 #goBack {
     margin-left: 410px;
+}
+
+#correctShow {
+    display: none;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(154, 159, 201);
+}
+
+#incorrectShow {
+    display: none;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(154, 159, 201);
 }

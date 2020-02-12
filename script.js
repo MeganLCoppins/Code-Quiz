@@ -7,9 +7,11 @@ var $answers = document.querySelector("#answersPrompt");
 var $results = document.querySelector("#results");
 var $yourScore = document.querySelector("#yourScore");
 var $goBack = document.querySelector("#goBack");
+var $correctShow = document.querySelector("#correctShow");
+var $incorrectShow = document.querySelector("#incorrectShow");
+var $noTime = document.querySelector("#noTime");
 
-var secondsLeft = 60;
-$timer.textContent = secondsLeft;
+var secondsLeft = 30;
 
 var score= 0;
 
@@ -65,8 +67,8 @@ var questions = [
   }
 ];
 
-// clear first div and replace with 2nd div when start button is pressed
 
+// start quiz and timer when button is pressed
 $start.addEventListener("click", function(e) {
   e.preventDefault();
   $quiz.style.display = "none";
@@ -76,13 +78,27 @@ $start.addEventListener("click", function(e) {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     $timer.textContent = secondsLeft;
-    if (secondsLeft === 0 || questionIndex === questions.length) {
-        clearInterval(timerInterval);
+    if (secondsLeft === 0) {
+        clearInterval(timerInterval)
+        $startQuiz.style.display = "none";
+        $noTime.style.display = "block";
+        $quiz.style.display = "block";
+        $correctShow.style.display = "none";
+        $incorrectShow.style.display = "none";
+        score = 0;
+        $score.textContent = ("Score: " + score);
+        questionIndex = 0;
+        secondsLeft = 30;
+        $timer.textContent = secondsLeft;
+    };
+    if (questionIndex === questions.length) {
+        clearInterval(timerInterval)
     };
   }, 1000);
 });
 
 function renderQuestion() {
+    $noTime.style.display = "none";
   // check to see if we still have a question available
   if (questionIndex === questions.length) {
     $startQuiz.style.display = "none";
@@ -106,6 +122,8 @@ function renderQuestion() {
 }
 
 $answers.addEventListener("click", function(e) {
+    $correctShow.style.display = "none";
+    $incorrectShow.style.display = "none";
   if (!e.target.matches("button")) return;
   var index = e.target.dataset.index;
   var answer = questions[questionIndex].answers[index].isCorrect;
@@ -113,22 +131,27 @@ $answers.addEventListener("click", function(e) {
     // handle logic for correct answer
     score++;
     $score.textContent = ("Score: " + score);
-
-  } 
+    $correctShow.style.display = "block";
+  } else {
+    //   handle logic for incorrect answer
+      $incorrectShow.style.display = "block";
+  }
   questionIndex++;
   renderQuestion();
 });
 
 function renderResults() {
+    $correctShow.style.display = "none";
+    $incorrectShow.style.display = "none";
     $yourScore.textContent = ("Your final score is : " + score + "/5!");
-    // go back to start quiz div when button is clicked
+    // reset score/timer and go back to start quiz div when button is clicked
     $goBack.addEventListener("click", function(e){
         $results.style.display = "none";
         $quiz.style.display = "block";
         score = 0;
         $score.textContent = ("Score: " + score);
         questionIndex = 0;
-        secondsLeft = 60;
+        secondsLeft = 20;
         $timer.textContent = secondsLeft;
     })
 
