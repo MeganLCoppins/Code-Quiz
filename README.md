@@ -1,4 +1,6 @@
 # Code-Quiz
 I built this application to create a timed quiz with 5 multiple-choice questions on JavaScript fundamentals. I created the application to function when the user clicks the 'start quiz' button. Once the start button is clicked the first question of the quiz is displayed and the timer displayed in the right hand corner counts down starting from 20 seconds. Below each question are 4 answer options. When the user selects an answer they are notified whether the answer is correct or incorrect and the next question is displayed. If the answer selected is correct the score displayed in the upper left corner increases by one point. If time runs out before all 5 questions are answered the current quiz attempt ends and upon clicking the 'start quiz' button the user can begin the quiz again. If the user has chosen an answer to all 5 questions the timer ends and their results are displayed. Located below the results is a 'go back' button which clears the current results and re-directs the user to begin the quiz again.
 
+<img src="https://raw.githubusercontent.com/MeganLCoppins/Code-Quiz/master/assets/images/Screen%20Shot%202020-02-23%20at%205.09.44%20PM.png">
+
 https://meganlcoppins.github.io/Code-Quiz/
